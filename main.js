@@ -7,6 +7,7 @@ btn.onclick = function () {
     alert('Вы не ввели число!');
     return;
   }
+  
   else{
     firstOperand = +firstOperand;
     secondOperand = +secondOperand;
