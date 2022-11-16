@@ -100,11 +100,12 @@ input {
     width: 251px;
 }
 
-.chat__input:focus + .chat__input-placeholder{
-    display: none;
+.chat__input:empty +.chat__input-placeholder{
+    display: block;
 }
 
 .chat__input-placeholder{
+    display: none;
     z-index: -1;
     user-select: none;
     position: absolute;
