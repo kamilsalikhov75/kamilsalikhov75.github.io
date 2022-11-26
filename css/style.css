@@ -1,0 +1,374 @@
+@font-face {
+    font-family: "Graphik LCG";
+    font-style: normal;
+    font-weight: 400;
+    src: local("Roboto"),
+        url("/fonts/GraphikLCG-Regular.woff2") format("woff2"),
+        url("/fonts/GraphikLCG-Regular.woff2") format("woff");
+}
+
+body,
+h6,
+h5,
+h4,
+h3,
+p,
+button {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: "Graphik LCG";
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 12px;
+}
+
+.link {
+    width: fit-content;
+    color: #000000;
+    line-height: 16px;
+    position: relative;
+    text-decoration: none;
+}
+
+.link+.link {
+    margin-top: 10px;
+}
+
+.link::after {
+    content: "";
+    border-bottom: 1px solid #000000;
+    display: block;
+    width: 0;
+    position: absolute;
+    bottom: -2px;
+    transition: all .3s;
+}
+
+.link:hover::after {
+    width: 100%;
+}
+
+header {
+    position: relative;
+    max-width: 1200px;
+    height: 75px;
+    margin: 0 auto;
+    margin-bottom: 70px;
+}
+
+.header__inner {
+    width: 1200px;
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #FFFFFF;
+    z-index: 1;
+}
+
+.header__left {
+    display: flex;
+    align-items: center;
+}
+
+.header__logo {
+    margin-right: 18px;
+}
+
+.header__navigation {
+    display: flex;
+    height: 100%;
+}
+
+.header__navigation-item {
+    height: 100%;
+}
+
+.header__navigation-item:hover {
+    background-color: #F5F5F5;
+}
+
+.header__link {
+    font-size: 14px;
+    line-height: 75px;
+    height: 75px;
+    text-decoration: none;
+    color: #000000;
+    padding: 0 20px;
+}
+
+.header__button{
+    padding: 13px;
+    border: none;
+    background-color: transparent;
+    border-radius: 6px;
+    transition: all .3s;
+}
+
+.header__button:hover{
+    background-color: #F5F5F5;
+}
+
+.minicart {
+    opacity: 0;
+    background-color: #FFFFFF;
+    box-shadow: 0px -2px 6px rgba(0, 0, 0, 0.25);
+    border-radius: 4px;
+    position: absolute;
+    top: 150px;
+    right: 53px;
+    width: 328px;
+    padding: 0 25px 25px 25px;
+    text-align: center;
+    font-size: 14px;
+    line-height: 14px;
+    transition: all .3s;
+}
+
+.minicart--active{
+    opacity: 1;
+    top: 70px;
+}
+
+.minicart__top {
+    padding: 10px 0;
+    position: relative;
+    margin-bottom: 46px;
+}
+
+.minicart__delete-button {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: transparent;
+    border: none;
+}
+
+.minicart__delete-button path {
+    transition: all .3s;
+}
+
+.minicart__delete-button:hover path {
+    stroke: #8A8A8A;
+}
+
+.minicart__product-top {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 33px;
+}
+
+.minicart__count {
+    color: #AFAFAF;
+    margin-top: 2px;
+}
+
+.minicart__product-title {
+    margin-bottom: 12px;
+}
+
+.minicart__product-description {
+    color: #AFAFAF;
+}
+
+.minicart__product-bottom {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 24px;
+}
+
+.minicart__product-button {
+    border: none;
+    border-radius: 50%;
+    padding: 7px 6px 5px 6px;
+    text-align: center;
+    margin: 0 15px;
+    transition: all .3s;
+}
+
+.minicart__product-button:hover {
+    background-color: #E3E3E3;
+}
+
+.minicart__product-size {
+    color: #AFAFAF;
+}
+
+.minicart__buttons {
+    display: flex;
+    flex-direction: column;
+}
+
+.minicart__button {
+    border: none;
+    background-color: #000000;
+    color: #FFFFFF;
+    padding: 21px 0;
+    border-radius: 4px;
+    transition: all .3s;
+}
+
+.minicart__button+.minicart__button {
+    margin-top: 8px;
+}
+
+.minicart__button:hover {
+    opacity: 0.7;
+}
+
+.categories {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 50px;
+}
+
+.category__image-link:hover .category__image {
+    opacity: 70%;
+}
+
+.category__image {
+    border-radius: 6px;
+    margin-bottom: 20px;
+    transition: all .3s;
+}
+
+.category__title {
+    font-size: 18px;
+    line-height: 18px;
+    margin-bottom: 8px;
+}
+
+.category__link {
+    text-transform: uppercase;
+    color: #AFAFAF;
+    transition: all .3s;
+}
+
+.category__link:hover {
+    color: #000000;
+}
+
+.products {
+    width: 1200px;
+    margin: 0 auto;
+    margin-bottom: 50px;
+}
+
+.products__title {
+    text-align: center;
+    font-size: 18px;
+    line-height: 18px;
+    margin-bottom: 30px;
+}
+
+.products__block {
+    display: flex;
+    justify-content: space-between;
+}
+
+.product {
+    width: 248px;
+    background-color: #F2F2F2;
+    border-radius: 6px;
+    position: relative;
+    text-align: center;
+    padding: 36px 8px 32px 8px;
+    transition: all .3s;
+}
+
+.product:hover {
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.product:hover .product__button {
+    display: block;
+}
+
+.product__button {
+    display: none;
+    position: absolute;
+    background-color: transparent;
+    border: none;
+    top: 21px;
+    right: 21px;
+}
+
+.product__button path {
+    transition: all .3s;
+}
+
+.product__button:hover path {
+    fill: #000000;
+}
+
+.product__image {
+    margin-bottom: 18px;
+}
+
+.product__title {
+    font-size: 18px;
+    line-height: 18px;
+    margin-bottom: 6px;
+}
+
+.product__description {
+    color: #AFAFAF;
+}
+
+.product__price {
+    margin-top: 20px;
+    font-size: 14px;
+    line-height: 16px;
+}
+
+footer {
+    padding: 30px 0;
+    border-top: 1px solid #F2F2F2;
+}
+
+.footer__inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer__title {
+    font-size: 12px;
+    line-height: 12px;
+    color: #AFAFAF;
+    margin-bottom: 10px;
+}
+
+.footer__input {
+    width: 190px;
+    border: none;
+    border-bottom: 1px solid #AFAFAF;
+}
+
+.footer__media-link {
+    text-decoration: none;
+}
+
+.footer__media-link path {
+    transition: all .3s;
+}
+
+.footer__media-link:hover path {
+    fill: #000000;
+}
+
+.footer__block-inner+.footer__block-inner {
+    margin-top: 24px;
+}
+
+.footer__links {
+    display: flex;
+    flex-direction: column;
+}
