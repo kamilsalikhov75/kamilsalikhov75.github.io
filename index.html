@@ -1,22 +1,455 @@
-<!DOCTYPE HTML>
-<html>
+<!DOCTYPE html>
+<html lang="ru">
 
 <head>
-  <meta charset="utf-8">
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
-<body style="height:2000px">
+<body>
+    <header>
+        <div class="header__inner">
+            <div class="header__left">
+                <a href="#" class="header__logo">
+                    <img src="images/logo.svg" alt="Логотип">
+                </a>
+                <nav class="header__navigation">
+                    <div class="header__navigation-item">
+                        <a href="#" class="header__link">Бренды</a>
+                    </div>
+                    <div class="header__navigation-item">
+                        <a href="#" class="header__link">Мужское</a>
+                    </div>
+                    <div class="header__navigation-item">
+                        <a href="#" class="header__link">Женское</a>
+                    </div>
+                    <div class="header__navigation-item">
+                        <a href="#" class="header__link">Аксессуары</a>
+                    </div>
+                    <div class="header__navigation-item">
+                        <a href="#" class="header__link">Скидки</a>
+                    </div>
+                </nav>
+            </div>
+            <div class="header__buttons">
+                <button class="header__button">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M12 1.76602L14.2645 9.43718L14.3719 9.80083L14.751 9.79557L22.4597 9.6886L16.1418 14.3824L15.854 14.5962L15.9642 14.9374L18.4373 22.5953L12.3088 17.7824L12 17.5399L11.6912 17.7824L5.56266 22.5953L8.0358 14.9374L8.14599 14.5962L7.85818 14.3824L1.54026 9.6886L9.24899 9.79557L9.62812 9.80083L9.73547 9.43718L12 1.76602Z"
+                            stroke="black" />
+                    </svg>
+                </button>
+                <button class="header__button">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M19 10C19 14.9706 14.9706 19 10 19C5.02944 19 1 14.9706 1 10C1 5.02944 5.02944 1 10 1C14.9706 1 19 5.02944 19 10ZM16.7087 17.4158C14.9346 19.0218 12.5815 20 10 20C4.47715 20 0 15.5228 0 10C0 4.47715 4.47715 0 10 0C15.5228 0 20 4.47715 20 10C20 12.5815 19.0218 14.9346 17.4158 16.7087L23.8536 23.1464C24.0488 23.3417 24.0488 23.6583 23.8536 23.8536C23.6583 24.0488 23.3417 24.0488 23.1464 23.8536L16.7087 17.4158Z"
+                            fill="black" />
+                    </svg>
+                </button>
+                <button id="cartButton" class="header__button">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M8.46446 2.46447C9.40215 1.52678 10.6739 1 12 1C13.3261 1 14.5979 1.52678 15.5355 2.46447C16.4732 3.40215 17 4.67392 17 6V8H7V6C7 4.67392 7.52678 3.40215 8.46446 2.46447ZM6 8V6C6 4.4087 6.63214 2.88258 7.75735 1.75736C8.88258 0.632141 10.4087 0 12 0C13.5913 0 15.1174 0.632141 16.2426 1.75736C17.3679 2.88258 18 4.4087 18 6V8H21L24 24H0L3 8H6ZM1.20493 23L3.82993 9H20.1701L22.7951 23H1.20493Z"
+                            fill="black" />
+                    </svg>
+                </button>
+                <button class="header__button">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M16 5C16 7.20914 14.2091 9 12 9C9.79086 9 8 7.20914 8 5C8 2.79086 9.79086 1 12 1C14.2091 1 16 2.79086 16 5ZM17 5C17 7.76142 14.7614 10 12 10C9.23858 10 7 7.76142 7 5C7 2.23858 9.23858 0 12 0C14.7614 0 17 2.23858 17 5ZM19.7782 16.2218C21.604 18.0477 22.7217 20.4493 22.9545 23H12L1.04552 23C1.27827 20.4493 2.39596 18.0477 4.22183 16.2218C6.28473 14.1589 9.08262 13 12 13C14.9174 13 17.7153 14.1589 19.7782 16.2218ZM20.4853 15.5147C22.4988 17.5282 23.7229 20.1837 23.9583 23C23.986 23.3314 24 23.665 24 24H23H12L1 24H0C0 23.665 0.0140111 23.3314 0.0417088 23C0.277117 20.1837 1.50119 17.5282 3.51472 15.5147C5.76516 13.2643 8.8174 12 12 12C15.1826 12 18.2348 13.2643 20.4853 15.5147Z"
+                            fill="black" />
+                    </svg>
+                </button>
+            </div>
+            <div class="minicart">
+                <div class="minicart__top">
+                    <h4 class="minicart__title">
+                        Корзина
+                    </h4>
+                    <p class="minicart__count">
+                        1 товар
+                    </p>
+                    <button class="minicart__delete-button">
+                        <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g clip-path="url(#clip0_41_1036)">
+                                <path d="M34 17L31 36H19L16 17M34 17H16M34 17H37M16 17H13M29.5 16V13.5H20.5V16.5"
+                                    stroke="black" stroke-width="2" />
+                                <path d="M23 22V31.5" stroke="black" stroke-width="2" />
+                                <path d="M27 22V31.5" stroke="black" stroke-width="2" />
+                            </g>
+                            <defs>
+                                <clipPath id="clip0_41_1036">
+                                    <rect width="24" height="24" fill="white" transform="translate(13 13)" />
+                                </clipPath>
+                            </defs>
+                        </svg>
+                    </button>
+                </div>
 
-  Нажмите на поле для перемещения мяча.
-  <br> Мяч не должен выходить за границы поля.
+                <div class="minicart__product">
+                    <div class="minicart__product-top">
+                        <img src="images/minicart.jpg" alt="Фотография товара" class="minicart__product-img">
+                        <div class="minicart__product-text">
+                            <h5 class="minicart__product-title">
+                                ADIDAS Skateboarding
+                            </h5>
+                            <p class="minicart__product-description">
+                                Мужской лонгслив Rugby Jersey
+                            </p>
+                        </div>
+                        <p class="minicart__product-price">
+                            6 990 ₽
+                        </p>
+                    </div>
+                    <div class="minicart__product-bottom">
+                        <button class="minicart__product-button">
+                            <svg width="21" height="20" viewBox="0 0 21 20" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <g clip-path="url(#clip0_117_1039)">
+                                    <path d="M0.5 10H20.5" stroke="black" />
+                                </g>
+                                <defs>
+                                    <clipPath id="clip0_117_1039">
+                                        <rect width="20" height="20" fill="white" transform="translate(0.5)" />
+                                    </clipPath>
+                                </defs>
+                            </svg>
+                        </button>
+                        <p class="minicart__product-count">
+                            1
+                        </p>
+                        <button class="minicart__product-button">
+                            <svg width="21" height="20" viewBox="0 0 21 20" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M0.5 10H20.5M10.5 20V0" stroke="black" />
+                            </svg>
+                        </button>
+                        <p class="minicart__product-size">
+                            XS
+                        </p>
+                    </div>
+                </div>
+                <div class="minicart__buttons">
+                    <button class="minicart__button">
+                        В корзину
+                    </button>
+                    <button class="minicart__button">
+                        Оформить заказ
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
 
+    <section class="categories">
+        <div class="category">
+            <a href="#" class="category__image-link">
+                <img src="images/category-1.jpg" alt="Мужкская одежда" class="category__image">
+            </a>
+            <h4 class="category__title">
+                Мужское
+            </h4>
+            <a href="#" class="link category__link">
+                Смотреть
+            </a>
+        </div>
+        <div class="category">
+            <a href="#" class="category__image-link">
+                <img src="images/category-2.jpg" alt="Мужкская одежда" class="category__image">
+            </a>
+            <h4 class="category__title">
+                Женское
+            </h4>
+            <a href="#" class="link category__link">
+                Смотреть
+            </a>
+        </div>
+    </section>
 
-  <div id="field">
-    <img src="https://ru.js.cx/clipart/ball.svg" id="ball">
-  </div>
+    <article class="products">
+        <h3 class="products__title">
+            Популярные товары
+        </h3>
+        <div class="products__block">
+            <div class="product">
+                <button class="product__button">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M12 0L14.7441 9.29562L24 9.16718L16.44 14.7838L19.4164 24L12 18.1756L4.58359 24L7.56 14.7838L0 9.16718L9.25593 9.29562L12 0Z"
+                            fill="#8A8A8A" />
+                    </svg>
+                </button>
+                <img src="images/product.jpg" alt="Фотография товара" class="product__image">
+                <h5 class="product__title">
+                    Saucony
+                </h5>
+                <p class="product__description">
+                    Кроссовки
+                </p>
+                <p class="product__description">
+                    Shadow Original
+                </p>
+                <p class="product__price">
+                    13 690 ₽
+                </p>
+            </div>
+            <div class="product">
+                <button class="product__button">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M12 0L14.7441 9.29562L24 9.16718L16.44 14.7838L19.4164 24L12 18.1756L4.58359 24L7.56 14.7838L0 9.16718L9.25593 9.29562L12 0Z"
+                            fill="#8A8A8A" />
+                    </svg>
+                </button>
+                <img src="images/product.jpg" alt="Фотография товара" class="product__image">
+                <h5 class="product__title">
+                    Saucony
+                </h5>
+                <p class="product__description">
+                    Кроссовки
+                </p>
+                <p class="product__description">
+                    Shadow Original
+                </p>
+                <p class="product__price">
+                    13 690 ₽
+                </p>
+            </div>
+            <div class="product">
+                <button class="product__button">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M12 0L14.7441 9.29562L24 9.16718L16.44 14.7838L19.4164 24L12 18.1756L4.58359 24L7.56 14.7838L0 9.16718L9.25593 9.29562L12 0Z"
+                            fill="#8A8A8A" />
+                    </svg>
+                </button>
+                <img src="images/product.jpg" alt="Фотография товара" class="product__image">
+                <h5 class="product__title">
+                    Saucony
+                </h5>
+                <p class="product__description">
+                    Кроссовки
+                </p>
+                <p class="product__description">
+                    Shadow Original
+                </p>
+                <p class="product__price">
+                    13 690 ₽
+                </p>
+            </div>
+            <div class="product">
+                <button class="product__button">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M12 0L14.7441 9.29562L24 9.16718L16.44 14.7838L19.4164 24L12 18.1756L4.58359 24L7.56 14.7838L0 9.16718L9.25593 9.29562L12 0Z"
+                            fill="#8A8A8A" />
+                    </svg>
+                </button>
+                <img src="images/product.jpg" alt="Фотография товара" class="product__image">
+                <h5 class="product__title">
+                    Saucony
+                </h5>
+                <p class="product__description">
+                    Кроссовки
+                </p>
+                <p class="product__description">
+                    Shadow Original
+                </p>
+                <p class="product__price">
+                    13 690 ₽
+                </p>
+            </div>
+        </div>
+    </article>
 
-  <script src="main.js"></script>
+    <article class="products">
+        <h3 class="products__title">
+            Новые поступления
+        </h3>
+        <div class="products__block">
+            <div class="product">
+                <button class="product__button">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M12 0L14.7441 9.29562L24 9.16718L16.44 14.7838L19.4164 24L12 18.1756L4.58359 24L7.56 14.7838L0 9.16718L9.25593 9.29562L12 0Z"
+                            fill="#8A8A8A" />
+                    </svg>
+                </button>
+                <img src="images/product.jpg" alt="Фотография товара" class="product__image">
+                <h5 class="product__title">
+                    Saucony
+                </h5>
+                <p class="product__description">
+                    Кроссовки
+                </p>
+                <p class="product__description">
+                    Shadow Original
+                </p>
+                <p class="product__price">
+                    13 690 ₽
+                </p>
+            </div>
+            <div class="product">
+                <button class="product__button">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M12 0L14.7441 9.29562L24 9.16718L16.44 14.7838L19.4164 24L12 18.1756L4.58359 24L7.56 14.7838L0 9.16718L9.25593 9.29562L12 0Z"
+                            fill="#8A8A8A" />
+                    </svg>
+                </button>
+                <img src="images/product.jpg" alt="Фотография товара" class="product__image">
+                <h5 class="product__title">
+                    Saucony
+                </h5>
+                <p class="product__description">
+                    Кроссовки
+                </p>
+                <p class="product__description">
+                    Shadow Original
+                </p>
+                <p class="product__price">
+                    13 690 ₽
+                </p>
+            </div>
+            <div class="product">
+                <button class="product__button">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M12 0L14.7441 9.29562L24 9.16718L16.44 14.7838L19.4164 24L12 18.1756L4.58359 24L7.56 14.7838L0 9.16718L9.25593 9.29562L12 0Z"
+                            fill="#8A8A8A" />
+                    </svg>
+                </button>
+                <img src="images/product.jpg" alt="Фотография товара" class="product__image">
+                <h5 class="product__title">
+                    Saucony
+                </h5>
+                <p class="product__description">
+                    Кроссовки
+                </p>
+                <p class="product__description">
+                    Shadow Original
+                </p>
+                <p class="product__price">
+                    13 690 ₽
+                </p>
+            </div>
+            <div class="product">
+                <button class="product__button">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M12 0L14.7441 9.29562L24 9.16718L16.44 14.7838L19.4164 24L12 18.1756L4.58359 24L7.56 14.7838L0 9.16718L9.25593 9.29562L12 0Z"
+                            fill="#8A8A8A" />
+                    </svg>
+                </button>
+                <img src="images/product.jpg" alt="Фотография товара" class="product__image">
+                <h5 class="product__title">
+                    Saucony
+                </h5>
+                <p class="product__description">
+                    Кроссовки
+                </p>
+                <p class="product__description">
+                    Shadow Original
+                </p>
+                <p class="product__price">
+                    13 690 ₽
+                </p>
+            </div>
+        </div>
+    </article>
+
+    <footer>
+        <div class="footer__inner">
+            <div class="footer__block">
+                <h6 class="footer__title">
+                    Подписаться на новости
+                </h6>
+                <form action="" class="footer__form">
+                    <input type="email" class="footer__input" placeholder="Введите email">
+                </form>
+                <div class="footer__media">
+                    <a href="#" class="footer__media-link">
+                        <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M26.162 31.994C26.771 31.994 27.02 31.588 27.013 31.079C26.982 29.162 27.727 28.13 29.072 29.475C30.56 30.963 30.868 31.994 32.675 31.994H35.875C36.683 31.994 37.001 31.734 37.001 31.326C37.001 30.463 35.58 28.94 34.376 27.822C32.69 26.257 32.611 26.22 34.063 24.336C35.864 21.997 38.22 19 36.136 19H32.155C31.383 19 31.327 19.435 31.052 20.083C30.057 22.43 28.166 25.47 27.448 25.005C26.697 24.52 27.041 22.599 27.098 19.744C27.113 18.99 27.109 18.473 25.957 18.205C25.328 18.06 24.716 18 24.148 18C21.875 18 20.307 18.953 21.198 19.119C22.769 19.412 22.618 22.811 22.252 24.279C21.614 26.835 19.216 22.255 18.217 19.974C17.976 19.426 17.902 19 17.042 19H13.787C13.295 19 13 19.16 13 19.516C13 20.118 15.96 26.236 18.786 29.286C21.542 32.261 24.266 31.994 26.162 31.994Z"
+                                fill="#8A8A8A" />
+                        </svg>
+                    </a>
+                    <a href="#" class="footer__media-link">
+                        <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M35.1522 13.0021C34.8272 13.0177 34.5243 13.1209 34.2577 13.2384C34.008 13.3479 33.0539 13.794 31.551 14.4966C30.0468 15.1998 28.0551 16.132 25.9304 17.128C21.6811 19.1201 16.9038 21.3625 14.4569 22.5101C14.3649 22.5533 14.0438 22.6651 13.7031 22.9551C13.3623 23.2451 13 23.846 13 24.5156C13 25.0556 13.236 25.592 13.5332 25.9122C13.8303 26.2325 14.1446 26.3907 14.4139 26.5105C15.391 26.9451 18.4213 28.297 18.9936 28.5522C19.195 29.2247 20.2918 32.8824 20.5462 33.7788C20.7138 34.3704 20.8735 34.7409 21.0813 35.0349C21.1852 35.182 21.306 35.3108 21.4523 35.4118C21.5108 35.4521 21.575 35.4832 21.6398 35.5118L21.6437 35.514C21.6586 35.5205 21.6715 35.5316 21.6867 35.5374C21.7153 35.5483 21.7344 35.5496 21.7726 35.5587C21.9249 35.6123 22.0787 35.646 22.2159 35.646C22.801 35.646 23.1592 35.2947 23.1592 35.2947L23.1807 35.2776L26.1902 32.4397L29.8402 36.2038C29.8916 36.283 30.3709 37 31.4279 37C32.0556 37 32.5535 36.6567 32.8731 36.291C33.1928 35.9254 33.3919 35.5413 33.4766 35.0584V35.0562C33.5558 34.5999 36.9196 15.774 36.9196 15.774L36.9137 15.7996C37.0122 15.3096 37.038 14.8532 36.9294 14.4029C36.8207 13.9526 36.5344 13.5215 36.1794 13.2895C35.8245 13.0575 35.4772 12.9864 35.1522 13.0021ZM34.9647 15.2801C34.9599 15.3119 34.9683 15.2959 34.9608 15.3333L34.9589 15.3461L34.9569 15.3589C34.9569 15.3589 31.6347 33.9439 31.5119 34.6517C31.5209 34.5983 31.4798 34.7046 31.4377 34.7688C31.3782 34.7241 31.2561 34.6666 31.2561 34.6666L31.2366 34.6432L26.2507 29.5017L22.7256 32.8229L23.7744 28.2456C23.7744 28.2456 30.3299 20.8479 30.7249 20.4173C31.0429 20.0729 31.1096 19.9528 31.1096 19.834C31.1096 19.6748 31.0335 19.5593 30.8635 19.5593C30.7106 19.5593 30.5048 19.7215 30.3948 19.7978C28.9619 20.7936 22.6709 24.7906 19.8509 26.5786C19.4028 26.3787 16.2894 24.9894 15.2342 24.5199C15.2422 24.5161 15.2395 24.5174 15.2478 24.5135C17.6954 23.3655 22.4707 21.1232 26.7194 19.1314C28.8437 18.1355 30.837 17.2026 32.34 16.5C33.8198 15.8082 34.8481 15.332 34.9647 15.2801Z"
+                                fill="#8A8A8A" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            <div class="footer__block">
+                <div class="footer__block-inner">
+                    <h6 class="footer__title">
+                        Интернет магазин
+                    </h6>
+                    <div class="footer__links"> <a href="tel:+74955445770" class="link">
+                            +7 (495) 544-57-70
+                        </a>
+                        <a href="tel:+78007752834" class="link">
+                            +7 (800) 775-28-34
+                        </a>
+                    </div>
+                </div>
+                <div class="footer__block-inner">
+                    <h6 class="footer__title">
+                        Адреса магазинов
+                    </h6>
+                    <a href="#" class="link">
+                        Москва, Каретный ряд, 8
+                    </a>
+                </div>
+            </div>
+            <div class="footer__block">
+                <h6 class="footer__title">
+                    Поддержка
+                </h6>
+                <div class="footer__links">
+                    <a href="#" class="link">
+                        Помощь покупателю
+                    </a>
+                    <a href="#" class="link">
+                        Доставка и оплата
+                    </a>
+                    <a href="#" class="link">
+                        Возврат
+                    </a>
+                    <a href="#" class="link">
+                        Программа лояльности
+                    </a>
+                </div>
+            </div>
+            <div class="footer__block">
+                <h6 class="footer__title">
+                    Информация
+                </h6>
+                <div class="footer__links">
+                    <a href="#" class="link">
+                        Контакты
+                    </a>
+                    <a href="#" class="link">
+                        Магазины
+                    </a>
+                    <a href="#" class="link">
+                        Блог
+                    </a>
+                    <a href="#" class="link">
+                        Вакансии
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="js/main.js"></script>
 </body>
 
 </html>
