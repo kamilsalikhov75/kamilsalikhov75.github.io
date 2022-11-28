@@ -1,22 +1,423 @@
-<!DOCTYPE HTML>
-<html>
+<!DOCTYPE html>
+<html lang="ru">
 
 <head>
-  <meta charset="utf-8">
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>It's my bike</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/d924bf2b19.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
-<body style="height:2000px">
+<body>
+    <header>
+        <div class="header__container container">
+            <div class="header__top">
+                <form class="header__form">
+                    <input type="search" class="header__input" placeholder="Поиск">
+                    <button class="header__button">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </button>
+                </form>
+                <a href="#" class="header__logo">
+                    <img src="images/logo/logo.svg" alt="Логотип магазина" class="header__logo-image">
+                </a>
+                <div class="header__menu">
+                    <a href="#" class="header__menu-link">
+                        <i class="fa-solid fa-bag-shopping"></i>
+                    </a>
+                    <a href="#" class="header__menu-link">
+                        <i class="fa-solid fa-location-dot"></i>
+                    </a>
+                    <a href="#" class="header__menu-link">
+                        <i class="fa-brands fa-telegram"></i>
+                    </a>
+                </div>
+            </div>
+            <nav class="header__navigation">
+                <a href="#" class="navigation__link">
+                    КАТАЛОГ
+                </a>
+                <a href="#" class="navigation__link">
+                    ВЕЛОСИПЕДЫ
+                </a>
+                <a href="#" class="navigation__link navigation__link--turquoise">
+                    ИДЕИ ПОДАРКОВ
+                </a>
+                <a href="#" class="navigation__link">
+                    НОВИНКИ
+                </a>
+                <a href="#" class="navigation__link">
+                    БРЕНДЫ
+                </a>
+                <a href="#" class="navigation__link">
+                    О МАГАЗИНЕ
+                </a>
+                <a href="#" class="navigation__link navigation__link--red">
+                    SALE
+                </a>
+                <a href="#" class="navigation__link">
+                    АКСЕССУАРЫ ДЛЯ ЛЮДЕЙ
+                </a>
+            </nav>
+        </div>
+    </header>
 
-  Нажмите на поле для перемещения мяча.
-  <br> Мяч не должен выходить за границы поля.
+    <article class="products">
+        <div class="products__container container">
+            <div class="products__title">
+                Велосипеды
+            </div>
+            <div class="product__cards">
+                <div class="product">
+                    <div class="product__card">
+                        <a href="" class="product__link">
+                            <img src="images/bike.jpeg" alt="bike" class="product__image">
+                        </a>
+                        <button class="product__button">
+                            В КОРЗИНУ
+                        </button>
+                    </div>
+                    <a href="#" class="product__name-link">Велосипед POLOANDBIKE Williamsburg white L</a>
+                    <div class="product__bottom">
+                        <a href="#" class="product__category-link">Велосипеды</a>
+                        <p class="product__price">
+                            59 000 <span>₽</span>
+                        </p>
+                    </div>
+                </div>
+                <div class="product">
+                    <div class="product__card">
+                        <a href="" class="product__link">
+                            <img src="images/bike.jpeg" alt="bike" class="product__image">
+                        </a>
+                        <button class="product__button">
+                            В КОРЗИНУ
+                        </button>
+                    </div>
+                    <a href="#" class="product__name-link">Велосипед POLOANDBIKE Williamsburg white L</a>
+                    <div class="product__bottom">
+                        <a href="#" class="product__category-link">Велосипеды</a>
+                        <p class="product__price">
+                            59 000 <span>₽</span>
+                        </p>
+                    </div>
+                </div>
+                <div class="product">
+                    <div class="product__card">
+                        <a href="" class="product__link">
+                            <img src="images/bike.jpeg" alt="bike" class="product__image">
+                        </a>
+                        <button class="product__button">
+                            В КОРЗИНУ
+                        </button>
+                    </div>
+                    <a href="#" class="product__name-link">Велосипед POLOANDBIKE Williamsburg white L</a>
+                    <div class="product__bottom">
+                        <a href="#" class="product__category-link">Велосипеды</a>
+                        <p class="product__price">
+                            59 000 <span>₽</span>
+                        </p>
+                    </div>
+                </div>
+                <div class="product">
+                    <div class="product__card">
+                        <a href="" class="product__link">
+                            <img src="images/bike.jpeg" alt="bike" class="product__image">
+                        </a>
+                        <button class="product__button">
+                            В КОРЗИНУ
+                        </button>
+                    </div>
+                    <a href="#" class="product__name-link">Велосипед POLOANDBIKE Williamsburg white L</a>
+                    <div class="product__bottom">
+                        <a href="#" class="product__category-link">Велосипеды</a>
+                        <p class="product__price">
+                            59 000 <span>₽</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </article>
 
+    <section class="categories">
+        <div class="container">
+            <div class="categories__blocks">
+                <div class="categories__block">
+                    <div class="category__block">
+                        <a href="#" class="category__link">
+                            <p class="category__title">
+                                Замки
+                            </p>
+                            <img src="images/category/category-1.jpeg" alt="" class="category__image">
+                        </a>
+                    </div>
+                    <div class="category__block">
+                        <a href="#" class="category__link">
+                            <p class="category__title">
+                                Фонари
+                            </p>
+                            <img src="images/category/category-2.jpeg" alt="" class="category__image">
+                        </a>
+                    </div>
+                </div>
+                <div class="categories__block">
+                    <div class="category__block">
+                        <a href="#" class="category__link">
+                            <p class="category__title">
+                                Крылья
+                            </p>
+                            <img src="images/category/category-3.jpeg" alt="" class="category__image">
+                        </a>
+                    </div>
+                    <div class="category__block">
+                        <a href="#" class="category__link">
+                            <p class="category__title">
+                                Стрепы и педали
+                            </p>
+                            <img src="images/category/category-4.jpeg" alt="" class="category__image">
+                        </a>
+                    </div>
+                    <div class="category__block">
+                        <a href="#" class="category__link">
+                            <p class="category__title">
+                                Обмотка и рули
+                            </p>
+                            <img src="images/category/category-5.jpeg" alt="" class="category__image">
+                        </a>
+                    </div>
+                    <div class="category__block">
+                        <a href="#" class="category__link">
+                            <p class="category__title">
+                                Фидбеги
+                            </p>
+                            <img src="images/category/category-6.jpeg" alt="" class="category__image">
+                        </a>
+                    </div>
+                </div>
+                <div class="categories__block">
+                    <div class="category__block">
+                        <a href="#" class="category__link">
+                            <p class="category__title">
+                                Шлемы
+                            </p>
+                            <img src="images/category/category-7.jpeg" alt="" class="category__image">
+                        </a>
+                    </div>
+                    <div class="category__block">
+                        <a href="#" class="category__link">
+                            <p class="category__title">
+                                Велокепки
+                            </p>
+                            <img src="images/category/category-8.jpeg" alt="" class="category__image">
+                        </a>
+                    </div>
+                </div>
+                <div class="categories__block">
+                    <div class="category__block">
+                        <a href="#" class="category__link">
+                            <p class="category__title">
+                                Седла
+                            </p>
+                            <img src="images/category/category-9.jpeg" alt="" class="category__image">
+                        </a>
+                    </div>
+                    <div class="category__block">
+                        <a href="#" class="category__link">
+                            <p class="category__title">
+                                Звонки
+                            </p>
+                            <img src="images/category/category-10.jpeg" alt="" class="category__image">
+                        </a>
+                    </div>
+                    <div class="category__block">
+                        <a href="#" class="category__link">
+                            <p class="category__title">
+                                Багажники
+                            </p>
+                            <img src="images/category/category-11.jpeg" alt="" class="category__image">
+                        </a>
+                    </div>
+                </div>
+                <div class="categories__block">
+                    <div class="category__block">
+                        <a href="#" class="category__link">
+                            <p class="category__title">
+                                Одежда
+                            </p>
+                            <img src="images/category/category-12.jpeg" alt="" class="category__image">
+                        </a>
+                    </div>
+                    <div class="category__block">
+                        <a href="#" class="category__link">
+                            <p class="category__title">
+                                Велоподарки
+                            </p>
+                            <img src="images/category/category-13.jpeg" alt="" class="category__image">
+                        </a>
+                    </div>
+                </div>
+                <div class="categories__block">
+                    <div class="category__block">
+                        <a href="#" class="category__link">
+                            <p class="category__title">
+                                Сумки
+                            </p>
+                            <img src="images/category/category-14.jpeg" alt="" class="category__image">
+                        </a>
+                    </div>
+                    <div class="category__block">
+                        <a href="#" class="category__link">
+                            <p class="category__title">
+                                Корзины
+                            </p>
+                            <img src="images/category/category-15.jpeg" alt="" class="category__image">
+                        </a>
+                    </div>
+                    <div class="category__block">
+                        <a href="#" class="category__link">
+                            <p class="category__title">
+                                Держатель телефона
+                            </p>
+                            <img src="images/category/category-16.jpeg" alt="" class="category__image">
+                        </a>
+                    </div>
+                </div>
+        
+                <div class="gift-card__block">
+                    <a href="#" class="gift-card__link">
+                        <img src="images/category/gift-card.jpg" alt="Подарочный сертификат" class="gift-card__image">
+                    </a>
+                </div>
+                <div class="categories__block">
+                    <div class="category__block">
+                        <a href="#" class="category__link">
+                            <p class="category__title">
+                                Ремонт и уход
+                            </p>
+                            <img src="images/category/category-17.jpeg" alt="" class="category__image">
+                        </a>
+                    </div>
+                    <div class="category__block">
+                        <a href="#" class="category__link">
+                            <p class="category__title">
+                                Хранение
+                            </p>
+                            <img src="images/category/category-18.jpeg" alt="" class="category__image">
+                        </a>
+                    </div>
+                    <div class="category__block">
+                        <a href="#" class="category__link">
+                            <p class="category__title">
+                                Бутылки
+                            </p>
+                            <img src="images/category/category-19.jpeg" alt="" class="category__image">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-  <div id="field">
-    <img src="https://ru.js.cx/clipart/ball.svg" id="ball">
-  </div>
+    <footer>
+        <div class="footer__container container">
+            <div class="footer__top">
+                <div class="footer__phones">
+                    <a href="tel:+79165058012" class="footer__phone">+7 916 505 80 12</a>
+                    <a href="tel:+88005503211" class="footer__phone">8 (800) 550-32-11</a>
+                </div>
+                <div class="footer__mailing">
+                    <h5 class="footer__title">
+                        Говорят, что у нас крутая рассылка
+                    </h5>
+                    <form action="" class="footer__form">
+                        <input type="text" class="footer__input" placeholder="Введите ваш email">
+                        <button class="footer__button">Подписаться</button>
+                    </form>
+                </div>
+                <div class="footer__media">
+                    <h5 class="footer__title">
+                        Все новинки и акции тут:
+                    </h5>
+                    <a href="#" class="footer__media-link">
+                        <i class="fa-brands fa-telegram"></i>
+                    </a>
+                    <a href="#" class="footer__media-link">
+                        <i class="fa-brands fa-vk"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                <a href="#" class="footer__logo">
+                    <img src="images/logo/footer-logo.svg" alt="Логотип магазина" class="footer__logo-img">
+                </a>
+                <ul class="footer__info-list">
+                    <li class="footer__info-item">
+                        <a href="#" class="footer__info-link">Контакты</a>
+                    </li>
+                    <li class="footer__info-item">
+                        <a href="#" class="footer__info-link">Бренды</a>
+                    </li>
+                    <li class="footer__info-item">
+                        <a href="#" class="footer__info-link">Новинки</a>
+                    </li>
+                    <li class="footer__info-item">
+                        <a href="#" class="footer__info-link">Распродажа</a>
+                    </li>
+                    <li class="footer__info-item">
+                        <a href="#" class="footer__info-link">Блог</a>
+                    </li>
+                    <li class="footer__info-item">
+                        <a href="#" class="footer__info-link">Оптовым покупателям</a>
+                    </li>
+                    <li class="footer__info-item">
+                        <a href="#" class="footer__info-link">Карта сайта</a>
+                    </li>
+                    <li class="footer__info-item">
+                        <a href="#" class="footer__info-link">Политика конфиденциальности</a>
+                    </li>
+                    <li class="footer__info-item">
+                        <a href="#" class="footer__info-link">Условия обслуживания</a>
+                    </li>
+                </ul>
+                <div class="footer__contact">
+                    <p class="footer__text">
+                        Мы работаем каждый день.
+                        Доставляем по всей России и зарубеж.
+                    </p>
+                    <p class="footer__text">
+                        Будни: 12:00 - 21:00
+                        Выходные: 12:00 - 20:00
+                    </p>
+                    <p class="footer__text">
+                        Мы работаем каждый день.
+                        Доставляем по всей России и зарубеж.
+                    </p>
+                    <div class="footer__contact-nav">
+                        <a href="#" class="footer__contact-link">
+                            Москва, 4-я Тверская-Ямская, д. 2/11
+                        </a>
+                        <a href="#" class="footer__contact-link">
+                            Петербург, ул. Моховая, 44.
+                        </a>
+                        <a href="tel:+79967747506" class="footer__contact-link">
+                            +7 996 774 75 06.
+                        </a>
+                        <a href="mailto:lera@itsmybike.ru" class="footer__contact-link">
+                            lera@itsmybike.ru
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
 
-  <script src="main.js"></script>
+    <script src="js/main.js"></script>
 </body>
 
 </html>
