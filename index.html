@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>It's my bike</title>
+    <link type="Image/x-icon" href="images/logo/favicon.svg" rel="icon">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600&display=swap" rel="stylesheet">
@@ -17,6 +18,35 @@
     <header>
         <div class="header__container container">
             <div class="header__top">
+                <button class="header__burger-button">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+                <nav class="header__burger-menu">
+                    <a href="#" class="burger-menu__link">
+                        КАТАЛОГ
+                    </a>
+                    <a href="#" class="burger-menu__link">
+                        ВЕЛОСИПЕДЫ
+                    </a>
+                    <a href="#" class="burger-menu__link burger-menu__link--turquoise">
+                        ИДЕИ ПОДАРКОВ
+                    </a>
+                    <a href="#" class="burger-menu__link">
+                        НОВИНКИ
+                    </a>
+                    <a href="#" class="burger-menu__link">
+                        БРЕНДЫ
+                    </a>
+                    <a href="#" class="burger-menu__link">
+                        О МАГАЗИНЕ
+                    </a>
+                    <a href="#" class="burger-menu__link burger-menu__link--red">
+                        SALE
+                    </a>
+                    <a href="#" class="burger-menu__link">
+                        АКСЕССУАРЫ ДЛЯ ЛЮДЕЙ
+                    </a>
+                </nav>
                 <form class="header__form">
                     <input type="search" class="header__input" placeholder="Поиск">
                     <button class="header__button">
@@ -25,6 +55,8 @@
                 </form>
                 <a href="#" class="header__logo">
                     <img src="images/logo/logo.svg" alt="Логотип магазина" class="header__logo-image">
+                    <img src="images/logo/logo-small.svg" alt="Логотип магазина"
+                        class="header__logo-image header__logo-image--small">
                 </a>
                 <div class="header__menu">
                     <a href="#" class="header__menu-link">
@@ -33,8 +65,11 @@
                     <a href="#" class="header__menu-link">
                         <i class="fa-solid fa-location-dot"></i>
                     </a>
-                    <a href="#" class="header__menu-link">
+                    <a href="#" class="header__menu-link header__menu-link--telegram">
                         <i class="fa-brands fa-telegram"></i>
+                    </a>
+                    <a href="#" class="header__menu-link header__menu-link--search">
+                        <i class="fa-solid fa-magnifying-glass"></i>
                     </a>
                 </div>
             </div>
@@ -166,38 +201,42 @@
                         </a>
                     </div>
                 </div>
-                <div class="categories__block">
-                    <div class="category__block">
-                        <a href="#" class="category__link">
-                            <p class="category__title">
-                                Крылья
-                            </p>
-                            <img src="images/category/category-3.jpeg" alt="" class="category__image">
-                        </a>
+                <div class="categories__block categories__block--vertical">
+                    <div class="categories__block categories__block--small">
+                        <div class="category__block">
+                            <a href="#" class="category__link">
+                                <p class="category__title">
+                                    Крылья
+                                </p>
+                                <img src="images/category/category-3.jpeg" alt="" class="category__image">
+                            </a>
+                        </div>
+                        <div class="category__block">
+                            <a href="#" class="category__link">
+                                <p class="category__title">
+                                    Стрепы и педали
+                                </p>
+                                <img src="images/category/category-4.jpeg" alt="" class="category__image">
+                            </a>
+                        </div>
                     </div>
-                    <div class="category__block">
-                        <a href="#" class="category__link">
-                            <p class="category__title">
-                                Стрепы и педали
-                            </p>
-                            <img src="images/category/category-4.jpeg" alt="" class="category__image">
-                        </a>
-                    </div>
-                    <div class="category__block">
-                        <a href="#" class="category__link">
-                            <p class="category__title">
-                                Обмотка и рули
-                            </p>
-                            <img src="images/category/category-5.jpeg" alt="" class="category__image">
-                        </a>
-                    </div>
-                    <div class="category__block">
-                        <a href="#" class="category__link">
-                            <p class="category__title">
-                                Фидбеги
-                            </p>
-                            <img src="images/category/category-6.jpeg" alt="" class="category__image">
-                        </a>
+                    <div class="categories__block categories__block--small">
+                        <div class="category__block">
+                            <a href="#" class="category__link">
+                                <p class="category__title">
+                                    Обмотка и рули
+                                </p>
+                                <img src="images/category/category-5.jpeg" alt="" class="category__image">
+                            </a>
+                        </div>
+                        <div class="category__block">
+                            <a href="#" class="category__link">
+                                <p class="category__title">
+                                    Фидбеги
+                                </p>
+                                <img src="images/category/category-6.jpeg" alt="" class="category__image">
+                            </a>
+                        </div>
                     </div>
                 </div>
                 <div class="categories__block">
@@ -288,7 +327,7 @@
                         </a>
                     </div>
                 </div>
-        
+
                 <div class="gift-card__block">
                     <a href="#" class="gift-card__link">
                         <img src="images/category/gift-card.jpg" alt="Подарочный сертификат" class="gift-card__image">

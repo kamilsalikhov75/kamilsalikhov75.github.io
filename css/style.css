@@ -2,7 +2,8 @@ button,
 p,
 h2,
 h5,
-body {
+body,
+ul {
     padding: 0;
     margin: 0;
 }
@@ -19,6 +20,7 @@ body {
 
 .container {
     max-width: 1170px;
+    padding: 0 20px;
     margin: 0 auto;
 }
 
@@ -29,10 +31,56 @@ header {
 }
 
 .header__top {
+    position: relative;
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-bottom: 35px;
+}
+
+.header__burger-button {
+    display: none;
+    border: none;
+    background-color: transparent;
+    height: 24px;
+    width: 24px;
+    font-size: 24px;
+    text-align: center;
+    color: #7AC5C2;
+}
+
+.header__burger-menu {
+    background-color: #FFFFFF;
+    display: none;
+    position: absolute;
+    top: 70px;
+    left: -250px;
+    border: 1px solid #B1B1B1;
+    border-bottom: none;
+    flex-direction: column;
+    text-align: left;
+    transition: all .3s;
+}
+
+.header__burger-menu--active {
+    left: -40px;
+}
+
+.burger-menu__link {
+    font-size: 13px;
+    line-height: 15px;
+    padding: 11px 20px;
+    text-decoration: none;
+    color: #000000;
+    border-bottom: 1px solid #B1B1B1;
+}
+
+.burger-menu__link--turquoise {
+    color: #7AC5C2;
+}
+
+.burger-menu__link--red {
+    color: #FF0000;
 }
 
 .header__form {
@@ -60,6 +108,10 @@ header {
     color: #DF9550;
 }
 
+.header__logo-image--small {
+    display: none;
+}
+
 .header__menu-link {
     text-decoration: none;
     color: #7AC5C2;
@@ -73,6 +125,10 @@ header {
 
 .header__menu-link:hover {
     color: #DF9550;
+}
+
+.header__menu-link--search {
+    display: none;
 }
 
 .header__navigation {
@@ -116,11 +172,15 @@ header {
 
 .product__cards {
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
 }
 
 .product {
     width: 286px;
+}
+
+.product--disabled {
+    display: none;
 }
 
 .product+.product {
@@ -128,7 +188,6 @@ header {
 }
 
 .product__card {
-    height: 285px;
     display: flex;
     flex-direction: column;
     position: relative;
@@ -143,9 +202,14 @@ header {
     z-index: inherit;
 }
 
+.product__link {
+    line-height: 0;
+}
+
 .product__image {
     max-width: 100%;
 }
+
 
 .product__button {
     z-index: -1;
@@ -168,7 +232,15 @@ header {
     cursor: pointer;
 }
 
+.product__button--active {
+    position: relative;
+    z-index: 0;
+    opacity: 1;
+    bottom: 0;
+}
+
 .product__bottom {
+    margin-top: 5px;
     display: flex;
     justify-content: space-between;
 }
@@ -217,7 +289,13 @@ header {
     margin-top: 20px;
 }
 
+.categories__block--small+.categories__block--small {
+    margin-top: 0;
+    margin-left: 20px;
+}
+
 .category__block {
+    height: 100%;
     position: relative;
     transition: all .3s;
 }
@@ -232,6 +310,8 @@ header {
 
 .category__link {
     text-decoration: none;
+    line-height: 0;
+    vertical-align: bottom;
 }
 
 .category__title {
@@ -251,10 +331,8 @@ header {
 }
 
 .gift-card__block {
-
+    height: auto;
     margin-top: 20px;
-    max-width: 1170px;
-    height: 225px;
     margin: 20px 0;
     text-align: center;
     transition: all 0.3s;
@@ -262,6 +340,15 @@ header {
 
 .gift-card__block:hover {
     opacity: 0.7;
+}
+
+.gift-card__block {
+    line-height: 0;
+    vertical-align: bottom;
+}
+
+.gift-card__image {
+    width: 100%;
 }
 
 footer {
@@ -328,7 +415,7 @@ footer {
     font-size: 15px;
     line-height: 18px;
     color: #FFFFFF;
-    padding: 9px 27px;
+    padding: 11px 27px;
     background-color: #7AC5C2;
     border-radius: 4px;
     border: none;
@@ -347,7 +434,7 @@ footer {
     transition: all .3s;
 }
 
-.footer__media-link:hover{
+.footer__media-link:hover {
     color: #DF9550;
 }
 
@@ -398,4 +485,148 @@ footer {
 
 .footer__contact-link:hover {
     color: #DF9550;
+}
+
+@media (max-width: 1000px) {
+    .navigation__link {
+        font-size: 10px;
+        line-height: 12px;
+    }
+
+    .footer__input {
+        width: 250px;
+    }
+
+    .footer__button {
+        padding: 11px 4px;
+    }
+
+    .category__title {
+        font-size: 12px;
+        line-height: 14px;
+        padding: 4px;
+        top: 18px;
+        left: 12px;
+    }
+}
+
+@media (max-width: 900px) {
+    .categories__block+.categories__block {
+        margin-top: 10px;
+    }
+
+    .categories__block--small+.categories__block--small {
+        margin-top: 0;
+        margin-left: 10px;
+    }
+
+    .category__block+.category__block {
+        margin-left: 10px;
+    }
+
+    .gift-card__block {
+        margin: 10px 0;
+    }
+}
+
+@media(max-width:800px) {
+    .footer__top {
+        display: block;
+        text-align: center;
+    }
+
+    .footer__bottom {
+        display: block;
+        text-align: center;
+    }
+
+    .footer__contact {
+        max-width: 100%;
+    }
+
+    .footer__phones {
+        margin-bottom: 20px;
+    }
+
+    .footer__form {
+        margin-bottom: 20px;
+    }
+
+    .footer__input {
+        margin-bottom: 10px;
+    }
+
+    .footer__info-list {
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 700px) {
+    header {
+        padding: 10px 20px;
+    }
+
+    .header__top {
+        padding: 10px 0;
+        margin: 0;
+    }
+
+    .header__burger-button {
+        display: block;
+    }
+
+    .header__burger-menu {
+        z-index: 1;
+        display: flex;
+    }
+
+    .header__form {
+        display: none;
+    }
+
+    .header__logo-image {
+        display: none;
+    }
+
+    .header__logo-image--small {
+        display: block;
+    }
+
+    .header__navigation {
+        display: none;
+    }
+
+    .header__menu-link--telegram {
+        display: none;
+    }
+
+    .header__menu-link--search {
+        display: inline;
+    }
+
+    .categories__block--vertical {
+        flex-direction: column;
+    }
+
+    .categories__block--small+.categories__block--small {
+        margin-left: 0;
+        margin-top: 10px;
+    }
+
+
+}
+
+@media (max-width: 560px) {
+    .product__button {
+        font-size: 10px;
+        line-height: 12px;
+    }
+
+    .category__title {
+        font-size: 8px;
+        line-height: 9px;
+        padding: 2px;
+        top: 8px;
+        left: 5px;
+    }
 }
