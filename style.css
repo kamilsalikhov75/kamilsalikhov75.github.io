@@ -1,18 +1,106 @@
-#field {
-  width: 500px;
-  height: 300px;
-  border: 10px solid black;
-  background-color: #00FF00;
-  overflow: hidden;
-  cursor: pointer;
-  position: relative;
+h3,
+p {
+  margin: 0;
 }
 
-#ball {
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 40px;
-  height: 40px;
+.card {
+  width: 300px;
+  height: 140px;
+  background: #F8F5F0;
+  border-radius: 20px;
+  padding: 10px;
+  position: relative;
+  transition: all 1s;
+}
+
+.card--active{
+  transform: perspective(320px) rotateY(180deg);
+}
+
+.card--active .card__top{
+flex-direction: row-reverse;
+}
+
+.card--active .card__word, .card--active .card__text{
+  flex-direction: row-reverse;
+  transform: scale(-1,1)
+}
+
+.card__top {
+  display: flex;
+  justify-content: space-between;
+}
+
+.card__button {
+  padding: 0;
+  width: 25px;
+  height: 25px;
+  border: none;
+  background-color: transparent;
   transition: all .5s;
+}
+
+.card__button path {
+  transition: all .3s;
+}
+
+.card__button:hover path {
+  fill: #A491D3;
+}
+
+.card__button--active-heart path {
+  fill: #BE494E;
+}
+
+.card__button--active-arrow {
+  transform: rotate(180deg);
+}
+
+.card__word-block {
+  text-align: center;
+  margin-top: 13px;
+  transition: all .3s;
+  width: fit-content;
+  margin: 0 auto;
+}
+
+.card__word-block--active {
+  margin-top: -25px;
+}
+
+.card__word {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 30px;
+  
+}
+
+.card__bottom {
+  visibility: hidden;
+  color: #F8F5F0;
+  position: absolute;
+  bottom: 10px;
+  transition: all .3s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.card__bottom--active {
+  visibility: visible;
+  color: #000000;
+}
+
+.card__text {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+  max-width: 300px;
+  max-height: 32px;
+  text-align: left;
+  overflow-y: auto;
 }
