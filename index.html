@@ -1,22 +1,51 @@
-<!DOCTYPE HTML>
-<html>
-
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <meta charset="utf-8">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
-
-<body style="height:2000px">
-
-  Нажмите на поле для перемещения мяча.
-  <br> Мяч не должен выходить за границы поля.
-
-
-  <div id="field">
-    <img src="https://ru.js.cx/clipart/ball.svg" id="ball">
+<body>
+  <div class="card">
+    <div class="card__top">
+      <button id="heartButton" class="card__button">
+        <svg width="25" height="23" viewBox="0 0 25 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M22.5738 1.99576C19.8981 -0.284512 15.9186 0.125644 13.4625 2.65982L12.5006 3.65104L11.5387 2.65982C9.08751 0.125644 5.10314 -0.284512 2.42736 1.99576C-0.639049 4.61295 -0.800182 9.31021 1.94396 12.1471L11.3922 21.903C12.0026 22.5329 12.9938 22.5329 13.6041 21.903L23.0524 12.1471C25.8014 9.31021 25.6402 4.61295 22.5738 1.99576Z"
+            fill="#064789" />
+        </svg>
+      </button>
+      <button id="translateButton" class="card__button">
+        <svg width="25" height="13" viewBox="0 0 25 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M5.94141 5.72656C5.80469 5.25391 5.63672 4.42969 5.63672 4.42969H5.61719C5.61719 4.42969 5.44922 5.25391 5.3125 5.72656L4.87891 7.19141H6.36719L5.94141 5.72656ZM24.0625 0.25H13.125V12.75H24.0625C24.582 12.75 25 12.332 25 11.8125V1.1875C25 0.667969 24.582 0.25 24.0625 0.25ZM23.125 4.9375C23.125 5.19531 22.9141 5.40625 22.6562 5.40625H22.2109C21.9414 6.32812 21.3633 7.25781 20.543 8.13672C20.8711 8.38672 21.2109 8.625 21.5625 8.83984C21.7773 8.97266 21.8477 9.25 21.7227 9.47266L21.4141 10.0156C21.2812 10.2461 20.9883 10.3203 20.7617 10.1836C20.2695 9.87891 19.8047 9.55469 19.3789 9.21094C18.9531 9.55078 18.4922 9.87891 17.9961 10.1836C17.7695 10.3203 17.4766 10.2461 17.3438 10.0156L17.0352 9.47266C16.9102 9.25391 16.9805 8.97266 17.1992 8.83984C17.5625 8.61719 17.9023 8.38281 18.2188 8.13672C17.9102 7.80859 17.6367 7.47266 17.3984 7.13281C17.2422 6.91016 17.3125 6.60156 17.543 6.46484L17.7969 6.3125L18.082 6.14453C18.293 6.01953 18.5664 6.07812 18.707 6.27734C18.9023 6.55078 19.1289 6.82422 19.3867 7.09375C19.9141 6.53906 20.3164 5.96484 20.5586 5.40625H16.0938C15.8359 5.40625 15.625 5.19531 15.625 4.9375V4.3125C15.625 4.05469 15.8359 3.84375 16.0938 3.84375H18.5938V3.21875C18.5938 2.96094 18.8047 2.75 19.0625 2.75H19.6875C19.9453 2.75 20.1562 2.96094 20.1562 3.21875V3.84375H22.6562C22.9141 3.84375 23.125 4.05469 23.125 4.3125V4.9375ZM0 1.1875V11.8125C0 12.332 0.417969 12.75 0.9375 12.75H11.875V0.25H0.9375C0.417969 0.25 0 0.667969 0 1.1875ZM2.30078 9.62891L4.54688 3.02344C4.61328 2.83203 4.78906 2.70703 4.99219 2.70703H6.26172C6.46094 2.70703 6.64062 2.83594 6.70703 3.02344L8.95312 9.62891C9.05469 9.93359 8.83203 10.25 8.50781 10.25H7.61328C7.51219 10.2499 7.41383 10.2172 7.33288 10.1566C7.25192 10.0961 7.1927 10.011 7.16406 9.91406L6.79688 8.66797H4.44531L4.08984 9.91016C4.03125 10.1094 3.84766 10.25 3.64062 10.25H2.74609C2.42578 10.25 2.19922 9.93359 2.30078 9.62891Z"
+            fill="#064789" />
+        </svg>
+      </button>
+    </div>
+    <div class="card__word-block">
+      <h3 class="card__word">
+      </h3>
+      <button id="descriptionButton" class="card__button">
+        <svg width="17" height="11" viewBox="0 0 17 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M7.66992 10.2021L1.0293 3.56152C0.570313 3.10254 0.570313 2.36035 1.0293 1.90625L2.13281 0.802734C2.5918 0.34375 3.33398 0.34375 3.78809 0.802734L8.49512 5.50977L13.2021 0.802734C13.6611 0.34375 14.4033 0.34375 14.8574 0.802734L15.9609 1.90625C16.4199 2.36523 16.4199 3.10742 15.9609 3.56152L9.32031 10.2021C8.87109 10.6611 8.12891 10.6611 7.66992 10.2021Z"
+            fill="#064789" />
+        </svg>
+      </button>
+    </div>
+    <div class="card__bottom">
+      <p id="wordTranscription" class="card__text">/wɜːd/</p>
+      <p id="wordDescription" class="card__text">
+        [countable] a single unit of language that means something and can be spoken or written [countable] a single unit of language that means something and can be spoken or written [countable] a single unit of language that means something and can be spoken or written
+      </p>
+    </div>
   </div>
-
   <script src="main.js"></script>
 </body>
-
 </html>
