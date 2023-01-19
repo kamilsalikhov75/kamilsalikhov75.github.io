@@ -1,18 +1,183 @@
-#field {
-  width: 500px;
-  height: 300px;
-  border: 10px solid black;
-  background-color: #00FF00;
-  overflow: hidden;
-  cursor: pointer;
-  position: relative;
+body,
+h1,
+h2,
+h5,
+p {
+  margin: 0;
 }
 
-#ball {
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 40px;
-  height: 40px;
-  transition: all .5s;
+body {
+  background-image: url('./images/background.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 26px;
+  line-height: 45px;
+}
+
+.container {
+  max-width: 1600px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding: 75px 0;
+  margin-bottom: 95px;
+}
+
+.header__link {
+  font-weight: 600;
+  font-size: 22px;
+  line-height: 45px;
+  text-decoration: none;
+  color: #000;
+}
+
+.header__link + .header__link {
+  margin-left: 67px;
+}
+
+.about__title {
+  font-family: 'Forum';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 94px;
+  line-height: 106px;
+  color: #282b00;
+  margin-bottom: 91px;
+  text-transform: uppercase;
+}
+
+.about__info {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 80px;
+}
+
+.about__info-text {
+  max-width: 700px;
+}
+
+.about__info-text + .about__info-text {
+  margin-top: 29px;
+}
+
+.about__info-image {
+  display: flex;
+}
+
+.about__image-block {
+  width: 340px;
+}
+
+.about__image-block--big {
+  width: 601px;
+}
+
+.about__image-block + .about__image-block {
+  margin-left: 20px;
+}
+
+.about__image {
+  width: 334px;
+  border: 1.5px solid #000000;
+}
+
+.about__image--big {
+  width: 100%;
+}
+
+.about__image--rounded {
+  border-radius: 0px 120px 0px 0px;
+}
+
+.about__image-text {
+  font-size: 24px;
+  line-height: 35px;
+  color: #aea9a9;
+}
+
+.about__team {
+  padding: 63px 99px 71px 99px;
+  border: 1.5px solid #282b00;
+  margin-bottom: 92px;
+}
+
+.about__team-title {
+  text-transform: uppercase;
+  font-family: 'Forum';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 38px;
+  line-height: 54px;
+  color: #282b00;
+  margin-bottom: 41px;
+}
+
+.about__team-blocks {
+  display: flex;
+}
+
+.about__team-block-title {
+  font-weight: 600;
+  font-size: 26px;
+  line-height: 35px;
+  white-space: nowrap;
+}
+
+.about__team-content {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 10px;
+}
+
+.about__team-link {
+  font-weight: 500;
+  font-size: 26px;
+  line-height: 35px;
+  text-decoration: none;
+  color: #000;
+}
+
+.links {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 80px;
+}
+
+.link {
+  font-weight: 500;
+  font-size: 38px;
+  line-height: 37px;
+  color: #252421;
+  text-decoration: none;
+}
+
+.link + .link {
+  margin-top: 32px;
+}
+
+.link__icon {
+  margin-left: 16px;
+}
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 122px 0;
+  row-gap: 12px;
+}
+
+.footer__link {
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 45px;
+  text-decoration: none;
+  color: #000;
 }

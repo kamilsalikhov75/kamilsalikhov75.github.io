@@ -1,22 +1,79 @@
-<!DOCTYPE HTML>
-<html>
-
-<head>
-  <meta charset="utf-8">
-  <link rel="stylesheet" href="style.css">
-</head>
-
-<body style="height:2000px">
-
-  Нажмите на поле для перемещения мяча.
-  <br> Мяч не должен выходить за границы поля.
-
-
-  <div id="field">
-    <img src="https://ru.js.cx/clipart/ball.svg" id="ball">
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vegan HoReCA</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Forum&amp;family=Raleway:wght@500;600&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body></body>
+  <div class="container">
+    <header class="header"> <a class="header__logo" href="#"><img class="header__logo-img" src="images/logo.svg"></a>
+      <nav class="header__nav"><a class="header__link" href="#">СПРАВОЧНИК</a><a class="header__link" href="#">ПОСТАВЩИКИ</a><a class="header__link" href="#about">О НАС</a><a class="header__link" href="#">КОНТАКТЫ</a></nav>
+    </header>
+    <section class="about" id="about">
+      <h1 class="about__title">О НАС</h1>
+      <div class="about__info"> 
+        <div class="about__info-block">
+          <p class="about__info-text">Vegan HoReCa – это проект, который родился из боли. Боли от того, что веганских блюд в общепите нет. А если они и есть, то в их составе есть что-то "не то": молоко, рыба, яйца, мёд.</p>
+          <p class="about__info-text">Вместо того, чтобы злиться, мы выявили проблему и взялись её решать. Проблема: отсутствие качественных образовательных материалов для представителей сферы общепита. Нюансов много, и их невозможно коротко объяснить. Решение: их нужно систематизировать и собирать в справочник.</p>
+        </div>
+        <div class="about__info-image">
+          <div class="about__image-block"> <img class="about__image" src="./images/marina.jpg">
+            <p class="about__image-text">Марина, основательница vegan-map.ru</p>
+          </div>
+          <div class="about__image-block"> <img class="about__image about__image--rounded" src="./images/julia.jpg">
+            <p class="about__image-text">Юля, авторка och-vkusno.com</p>
+          </div>
+        </div>
+      </div>
+      <div class="about__info"> 
+        <div class="about__info-image">
+          <div class="about__image-block about__image-block--big"> <img class="about__image about__image--big" src="images/anna.jpg">
+            <p class="about__image-text">Анна, авторка anna_veganka, владела веганской доставкой</p>
+          </div>
+        </div>
+        <div class="about__info-block">
+          <p class="about__info-text">Над этим справочником трудились те, кто близко знакомы с этой сферой, некоторые из нас даже имели свой веганский бизнес. Мы скурпулёзно собирали всю нашу экспертизу и превращали её в части справочника. </p>
+          <p class="about__info-text">Мы продолжим добавлять новые записи по мере необходимости, и обновлять старые. А если у вас возникнет вопрос, то мы ответим на него, если вы напишите на hello@veganrussian.ru.</p>
+        </div>
+      </div>
+      <div class="about__team">
+        <h2 class="about__team-title">НАД ПРОЕКТОМ РАБОТАЛИ:</h2>
+        <div class="about__team-blocks">
+          <div class="about__team-block"> 
+            <div class="about__team-content">
+              <h5 class="about__team-block-title">Авторки справочника:</h5><a class="about__team-link" href="#">Юлия Амелина,</a><a class="about__team-link" href="#">Анна Свердлова,</a><a class="about__team-link" href="#">Марина Ястремская.</a>
+            </div>
+            <div class="about__team-content">
+              <h5 class="about__team-block-title">Редакторка:</h5><a class="about__team-link" href="#">Дарья Ларина.</a>
+            </div>
+            <div class="about__team-content">
+              <h5 class="about__team-block-title">Видео:</h5><a class="about__team-link" href="#">Михаил Золотарёв.</a>
+            </div>
+          </div>
+          <div class="about__team-block"> 
+            <div class="about__team-content">
+              <h5 class="about__team-block-title">Актрисы видео:</h5><a class="about__team-link" href="#">Анна,</a><a class="about__team-link" href="#">Наталья,</a><a class="about__team-link" href="#">Паулина,</a><a class="about__team-link" href="#">Дара.</a>
+            </div>
+            <div class="about__team-content">
+              <h5 class="about__team-block-title">Фото:</h5><a class="about__team-link" href="#">Карина Гарифуллина.</a>
+            </div>
+            <div class="about__team-content">
+              <h5 class="about__team-block-title">Дизайнерка:</h5><a class="about__team-link" href="#">Маргарита Хайбрахманова.</a>
+            </div>
+            <div class="about__team-content">
+              <h5 class="about__team-block-title">Верстальщик:</h5><a class="about__team-link" href="#">Эдик Гизбрехт.</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="links"><a class="link" href="#">Открыть справочник по веганским блюдам<img class="link__icon" src="images/arrow.svg"></a><a class="link" href="#">Посмотреть поставщиков<img class="link__icon" src="images/arrow.svg"></a></section>
+    <footer class="footer"> <a class="footer__logo" href="#"><img class="footer__logo-img" src="images/logo.svg"></a><a class="footer__link" href="#">НАПИСАТЬ НАМ </a><a class="footer__link" href="#">НАШ INSTAGRAM </a></footer>
   </div>
-
-  <script src="main.js"></script>
-</body>
-
 </html>
