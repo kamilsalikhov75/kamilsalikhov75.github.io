@@ -1,0 +1,69 @@
+body {
+  flex-direction: column;
+  align-items: center;
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 400;
+  display: flex;
+}
+
+.file-input {
+  margin-bottom: 20px;
+}
+
+.blocks {
+  max-width: 1200px;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin: 0 auto;
+  display: flex;
+}
+
+.week-block {
+  font-size: 18px;
+}
+
+.block {
+  width: 300px;
+  border: 1px solid #000;
+  margin: 0 auto;
+  padding: 10px;
+  font-size: 12px;
+  line-height: 15px;
+}
+
+.block--monday {
+  background-color: #fdf652;
+}
+
+.block--tuesday {
+  background-color: #ef97ca;
+}
+
+.block--wednesday {
+  background-color: #5fc55b;
+}
+
+.block--thursday {
+  background-color: #f1a23a;
+}
+
+.block--friday {
+  background-color: #6ac4f8;
+}
+
+.block--saturday {
+  background-color: #c34cf4;
+}
+
+.block + .block {
+  margin-top: 10px;
+}
+
+.text + .text {
+  border-bottom: 1px solid #000;
+  padding-bottom: 5px;
+}
+
+/*# sourceMappingURL=index.3a01df49.css.map */
